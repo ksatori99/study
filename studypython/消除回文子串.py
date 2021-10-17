@@ -29,7 +29,7 @@ def longestPalindrome(s):
                         
     # 情况三：如果字符串中的每个字符均不相同，则情况二后的sublen长度仍为0           
     if sublen==0:
-        # print('该字符串中没有回文')
+        print('该字符串中已经没有回文')
         a=0
 
     return subset,a
@@ -52,6 +52,7 @@ def severaltimes(s):
 
 
 if __name__=='__main__':
-    ss='abcdefghijklmndadaaiiiffffll123321laeg132sd'
+    # ss='abcdefghijklmndadaaiiiffffll123321laeg132sd'
+    ss=input().strip()
     b=severaltimes(ss)
-    print(b)
+    
