@@ -228,7 +228,13 @@
 #     a=list(map(int,a))
 #     b=[]
 #     b=lalala(a)
-#     print(a)
+#     print(b)
+#     b.reverse()
+#     print(b)
+    
+# a=['a','g','e','h','l','d']
+# a=sorted(a,key=str.lower)
+# print(a)
 
 # 找出0-输入数的奇数和
 # a=int(input())
@@ -399,4 +405,128 @@
 # # 现在一个叫做 func2.log 的文件出现了，里面的内容就是上面的字符串
 
 
+
+#
+# 
+# @param num int整型一维数组 
+# @param target int整型 
+# @return int整型二维数组
+
+# class solution:
+#     def __init__(self,t,c):
+#         self.a=[]
+#         self.b=[]
+#         self.t=t
+#         self.c=c
+#         a=type(self.t)
+#         print(a,self.t)
+
+
+#         def lalala(self,ii=0,total=0):
+#         #     遍历数组
+#             if total >=self.t:
+#                 return
+#             if total==self.t:
+#                 self.a.append(self.b)
+#                 return
+
+#             for i in range(ii,len(c)):
+#                 total+=self.c[i]
+#                 self.b.append(self.c[i])
+#                 self.lalala(self.c,i)
+#                 self.b.pop()
+#                 total-=c[i]
+                
+#         total=0
+#         lalala(0,total)
+#         return self.a
+
+        
+    
+# if __name__=='__main__':
+# #     c=input().strip().split()
+# #     c=list(map(int,c))
+# #     t=int(input())
+#     c=[100,10,20,70,60,10,50]
+#     t=80
+#     llll=solution(t,c)
+#     ans=llll.lalala()
+#     print(ans)
+
+# 力扣40题
+class Solution:
+
+    def __init__(self) -> None:
+        pass
+
+    def lalala(self, c, t):
+        
+        a = []
+        b = []
+        c.sort()
+
+        def llll(ii,b, total):
+            
+            if total > t:
+                return
+            
+            elif total == t:
+                a.append(b[::])
+                return
+            
+            else:
+            
+                for i in range(ii, len(c)):
+                    if i>ii and c[i]==c[i-1]:
+                        continue
+                    total += c[i]
+                    b.append(c[i])
+                    llll(i+1,b, total)
+                    b.pop()
+                    total -= c[i]   
+        total = 0
+        llll(0,b, total)
+        return a
+
+if __name__=='__main__':
+#     c=input().strip().split()
+#     c=list(map(int,c))
+#     t=int(input())
+    c=[100,10,20,70,60,10,50]
+    t=80
+    func=Solution()
+    ans=func.lalala(c,t)
+    print(ans)
+
+
+    # ccc=[]
+    # for i in range(len(ans)):
+    #     linshi=[]
+    #     for j  in ans[i]:
+    #         if j not in linshi:
+    #             linshi.append(j)
+    #     ccc.append(linshi)
+    # # print(ccc)
+
+    # ddd=[]
+    # aaaaa=0
+
+    # for j in ccc:
+        
+    #     if j not in ddd:
+    #         ddd.append(j)
+    # ggg=[]
+    # for i in ddd:
+    #     for j in i:
+    #         aaaaa+=j
+    #     if aaaaa==t:
+    #         ggg.append(i)
+    #     aaaaa=0
+
+    # print(ggg)
+
+            
+
+
+    
 
