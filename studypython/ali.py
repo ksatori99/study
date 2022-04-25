@@ -7,7 +7,7 @@ def erjinzhi(array):
     
     return temp
 
-
+# sadadadada
 #判定是否都为1
 def judge(array):
     temp={}
